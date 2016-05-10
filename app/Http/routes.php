@@ -12,5 +12,31 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return "Home";
+});
+
+Route::post('/', function () {
+    return "Home Post";
+});
+
+Route::get('/register', function () {
+    return "Register Form";
+});
+
+Route::post('/register', function () {
+    return "Register Form";
+});
+
+Route::get('/archive', function () {
+    return "Archive";
+});
+
+
+
+Route::get('/search', function () {
+    return "Search";
+});
+
+Route::post('/search', function () {
+    return "Search Post";
 });
