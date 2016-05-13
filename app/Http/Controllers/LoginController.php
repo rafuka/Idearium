@@ -41,6 +41,10 @@ class LoginController extends Controller {
   *  Responds to POST /register. Handles user registration.
   */
   public function postRegister(Request $request) {
+    $this->validate($request, [
+      'email' => 'required|email',
+      'password' => 'required|min:7'
+    ]);
     return "Registered";
   }
 }
