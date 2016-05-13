@@ -9,4 +9,8 @@ class Note extends Model
     public function user() {
       return $this->belongsTo('\Idearium\User');
     }
+
+    protected $fillable = [
+        'user_id', 'text'
+    ];
 }

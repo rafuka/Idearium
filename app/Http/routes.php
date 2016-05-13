@@ -13,7 +13,14 @@
 
 Route::group(['middleware' => 'auth'], function() {
   Route::get('/', 'NotesController@getNotebook');
+  Route::post('/', 'NotesController@postNotebook');
+
   Route::get('/archive', 'NotesController@getArchive');
+
+  Route::get('/edit/{id?}', 'NotesController@getEdit');
+  Route::post('/edit', 'NotesController@postEdit');
+
+  Route::get('/delete/{id?}', 'NotesController@getDelete');
 
   Route::get('/search', function () {
       return "Search";
@@ -21,7 +28,7 @@ Route::group(['middleware' => 'auth'], function() {
   Route::post('/search', function () {
       return "Search Post";
   });
-  
+
   Route::get('/logout', 'Auth\AuthController@logout');
 });
 
@@ -44,9 +51,16 @@ Route::post('/register', 'Auth\AuthController@postRegister');
 
 
 Route::get('/test', function () {
-  $notes = \Idearium\Note::with('user')->get();
+  if (!\Auth::check()) {
+    return redirect('login');
+  }
+
+  $user = \Auth::user()->toArray();
+  dump($user);
+  $notes = \Idearium\Note::with('user')->where('user_id', $user['id'])->get();
   foreach($notes as $note) {
     echo $note->user->email . "<br>";
+    echo $note->text . '<br>';
   }
 
   dump($notes->toArray());
