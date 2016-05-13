@@ -13,4 +13,8 @@ class Note extends Model
     protected $fillable = [
         'user_id', 'text'
     ];
+
+    public function tags() {
+      return $this->belongsToMany('\Idearium\Tag')->withTimestamps();
+    }
 }
