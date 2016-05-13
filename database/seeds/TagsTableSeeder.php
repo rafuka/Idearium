@@ -12,40 +12,40 @@ class TagsTableSeeder extends Seeder
     public function run()
     {
       DB::table('tags')->insert([
-        'note_id' => 1,
-        'tag' => 'Love',
+
+        'name' => 'Love',
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString()
 
       ]);
 
       DB::table('tags')->insert([
-        'note_id' => 1,
-        'tag' => 'Ideas',
+
+        'name' => 'Ideas',
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString()
 
       ]);
 
       DB::table('tags')->insert([
-        'note_id' => 2,
-        'tag' => 'Programming',
+
+        'name' => 'Programming',
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString()
 
       ]);
 
       DB::table('tags')->insert([
-        'note_id' => 3,
-        'tag' => 'A tag',
+
+        'name' => 'A tag',
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString()
 
       ]);
 
       DB::table('tags')->insert([
-        'note_id' => 3,
-        'tag' => 'Another Tag',
+
+        'name' => 'Another Tag',
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString()
 

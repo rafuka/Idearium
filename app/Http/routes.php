@@ -29,7 +29,14 @@ Route::post('/search', function () {
     return "Search Post";
 });
 
+Route::get('/test', function () {
+  $notes = \Idearium\Note::with('user')->get();
+  foreach($notes as $note) {
+    echo $note->user->email . "<br>";
+  }
 
+  dump($notes->toArray());
+});
 
 
   Route::get('/debug', function (){
