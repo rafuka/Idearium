@@ -31,7 +31,7 @@ Route::post('/search', function () {
 
 
 
-if (App::environment('local')) {
+
   Route::get('/debug', function (){
     echo '<pre>';
     echo '<h1>environment:';
@@ -48,4 +48,3 @@ if (App::environment('local')) {
       echo '<strong style="background-color:crimson; padding:5px;"></strong>';
     }
   });
-}
