@@ -10,7 +10,7 @@
 
 @section('main')
   <div class="form-wrap">
-    <form action="/" method="POST">
+    <form action="/login" method="POST">
       {{ csrf_field() }}
       <label for="email">e-mail</label><br>
       <input type="email" name="email" id="email" value="{{ old('email') }}"/><div class="error">{{ $errors->first('email') }}</div><br>

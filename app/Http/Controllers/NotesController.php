@@ -12,7 +12,9 @@ class NotesController extends Controller {
   * Display user's notebook when logged in.
   */
   public function getNotebook() {
-    return "Home Notebook Dispñlay";
+  
+
+    return "Home Notebook Display";
   }
 
   /*

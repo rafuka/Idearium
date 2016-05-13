@@ -13,7 +13,8 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
           'email' => 'jill@harvard.edu',
-          'password' => 'helloworld',
+          'name' => 'Jill',
+          'password' => \Hash::make('helloworld'),
           'created_at' => Carbon\Carbon::now()->toDateTimeString(),
           'updated_at' => Carbon\Carbon::now()->toDateTimeString()
 
@@ -21,7 +22,8 @@ class UsersTableSeeder extends Seeder
 
         DB::table('users')->insert([
           'email' => 'jamal@harvard.edu',
-          'password' => 'helloworld',
+          'name'  => 'Jamal',
+          'password' => \Hash::make('helloworld'),
           'created_at' => Carbon\Carbon::now()->toDateTimeString(),
           'updated_at' => Carbon\Carbon::now()->toDateTimeString()
 

@@ -5,6 +5,9 @@
   <title>@yield('title', 'Idearium')</title>
 </head>
 <body>
+  @if (Session::has('message'))
+    <div>{{ Session::get('message') }}</div>
+  @endif
   <header>
     @yield('header')
   </header>

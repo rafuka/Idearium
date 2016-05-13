@@ -11,23 +11,37 @@
 |
 */
 
+Route::group(['middleware' => 'auth'], function() {
+  Route::get('/', 'NotesController@getNotebook');
+  Route::get('/archive', 'NotesController@getArchive');
 
-Route::get('/', 'LoginController@getIndex');
-Route::post('/', 'LoginController@postIndex');
-
-
-Route::get('/register', 'LoginController@getRegister');
-Route::post('/register', 'LoginController@postRegister');
-
-Route::get('/archive', 'NotesController@getArchive');
-
-
-Route::get('/search', function () {
-    return "Search";
+  Route::get('/search', function () {
+      return "Search";
+  });
+  Route::post('/search', function () {
+      return "Search Post";
+  });
+  
+  Route::get('/logout', 'Auth\AuthController@logout');
 });
-Route::post('/search', function () {
-    return "Search Post";
-});
+
+
+/*
+* Authentication
+*/
+Route::get('/login', 'Auth\AuthController@getLogin');
+Route::post('/login', 'Auth\AuthController@postLogin');
+
+Route::get('/register', 'Auth\AuthController@getRegister');
+Route::post('/register', 'Auth\AuthController@postRegister');
+
+
+
+
+
+
+
+
 
 Route::get('/test', function () {
   $notes = \Idearium\Note::with('user')->get();
