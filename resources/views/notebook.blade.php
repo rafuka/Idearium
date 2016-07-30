@@ -11,8 +11,8 @@
 @section('main')
   <form method="POST" action="/" id="textform">
     {{ csrf_field() }}
-    <textarea type="textarea" name="text" id="text" form="textform" placeholder="Write a New note..."></textarea><br>
-    <input type="submit" value="Save!" id="submit"/>
+    <textarea type="textarea" class="form-control" name="text" id="text" form="textform" placeholder="Write a New note..."></textarea><br>
+    <button type="submit" class="btn btn-primary">Save!</button>
   </form>
 @stop
 

@@ -14,7 +14,6 @@ a {
 
 nav ul li {
   display: inline-block;
-
 }
 
 nav ul li a {
@@ -32,55 +31,77 @@ header h1 {
   margin: 0;
 }
 
-#leftnav {
-  float: left;
-}
-
-#rightnav {
-  float: right;
-}
-
 main {
-  clear: both;
-  padding-top: 30px;
   text-align: center;
-  width: 80%;
-  margin: 0 auto;
+  min-height: 100vh;
 }
 
 footer {
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #222222;
+  margin-top: 30px;
+
+}
+
+footer p {
+  margin: 0 auto;
+  color: white;
 }
 
 .flash-msg {
   text-align: center;
-  background-color: yellow;
-  color: red;
+  margin-bottom: 0px;
 }
 
 .note-wrap {
-  border: 1px solid black;
-  width: 600px;
   text-align: left;
-  margin: 15px auto;
+
 }
 
 .note-view {
   margin: 0;
   padding: 5px;
-  min-height: 100px;
-  max-height: 300px;
-  overflow-y: scroll;
+  height: 200px;
+  overflow-y: auto;
 
 }
 
 #text {
-  width: 500px;
-  height: 525px;
+  width: 100%;
+  max-width: 800px;
+  min-width: 100px;
+  height: 300px;
   font-size: 1.2em;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 #submit {
   width: 60px;
   height: 40px;
+}
+
+.form-horizontal {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.error {
+  color: red;
+}
+
+.form-link {
+  margin-top: 50px;
+}
+
+.dlt-link {
+  color: red;
+  float: right;
+}
+
+.dlt-link:hover {
+  color: red;
 }

@@ -9,8 +9,8 @@
     <form method="POST" action="/edit" id="textform">
       {{ csrf_field() }}
       <input type="hidden" name="id" value="{{ $note->id }}" />
-      <textarea type="textarea" name="text" id="text" form="textform">{{ $note->text }}</textarea><br>
-      <input type="submit" value="Save!" id="submit" />
+      <textarea type="textarea" class="form-control" name="text" id="text" form="textform">{{ $note->text }}</textarea><br>
+      <button type="submit" class="btn btn-primary">Save!</button>
     </form>
   @else
     <p>Sorry, the note you're trying to edit was'nt found!</p>

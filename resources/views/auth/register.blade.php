@@ -9,25 +9,43 @@
 @stop
 
 @section('main')
-  <div class="form-wrap">
-    <form action="/register" method="POST">
-      {{ csrf_field() }}
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" value ="{{ old('name') }}" /><div class="error">{{ $errors->first('name') }}</div><br>
 
-      <label for="email">e-mail:</label>
-      <input type="email" name="email" id="email" value="{{ old('email') }}"/><div class="error">{{ $errors->first('email') }}</div><br>
+    <form action="/register" method="POST" class="form-horizontal">
+      <fieldset>
+        {{ csrf_field() }}
+        <div class="form-group">
+          <label for="name" class="col-lg-2 control-label">Name:</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="name" id="name" value ="{{ old('name') }}" /><div class="error">{{ $errors->first('name') }}</div>
+          </div>
+        </div>
 
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" /><div class="error">{{ $errors->first('password') }}</div><br>
+        <div class="form-group">
+          <label for="email" class="col-lg-2 control-label">e-mail:</label>
+          <div class="col-lg-10">
+            <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}"/><div class="error">{{ $errors->first('email') }}</div>
+          </div>
+        </div>
 
-      <label for="password_confirmation">Repeat Password:</label>
-      <input type="password" name="password_confirmation" id="password_confirmation"/><div class="error">{{ $errors->first('password_confirmation') }}</div><br>
+        <div class="form-group">
+          <label for="password" class="col-lg-2 control-label">Password:</label>
+          <div class="col-lg-10">
+            <input type="password" class="form-control" name="password" id="password" /><div class="error">{{ $errors->first('password') }}</div>
+          </div>
+        </div>
 
-      <input type="submit" value="Register!"/>
+        <div class="form-group">
+          <label for="password_confirmation" class="col-lg-2 control-label">Repeat Password:</label>
+          <div class="col-lg-10">
+            <input type="password" class="form-control" name="password_confirmation" id="password_confirmation"/><div class="error">{{ $errors->first('password_confirmation') }}</div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Register!</button>
+      </fieldset>
     </form>
-  </div>
-  <p>Already have an account? <a href="/login">Log In!</a></p>
+
+  <p class="form-link">Already have an account? <a href="/login">Log In!</a></p>
 @stop
 
 @section('footer')
