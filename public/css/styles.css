@@ -79,6 +79,10 @@ footer p {
   border-radius: 5px;
 }
 
+#textform {
+  margin: 10px;
+}
+
 #submit {
   width: 60px;
   height: 40px;
