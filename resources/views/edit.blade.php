@@ -10,7 +10,7 @@
       {{ csrf_field() }}
       <input type="hidden" name="id" value="{{ $note->id }}" />
       <textarea type="textarea" class="form-control" name="text" id="text" form="textform">{{ $note->text }}</textarea><br>
-      <button type="submit" class="btn btn-primary">Save!</button>
+      <button type="submit" class="btn btn-success">Save!</button>
     </form>
   @else
     <p>Sorry, the note you're trying to edit was'nt found!</p>
