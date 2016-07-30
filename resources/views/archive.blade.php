@@ -16,7 +16,7 @@
       	</div>
       	<div class="panel-footer">
       		<a href="/edit/{{ $note->id }}">Edit</a>
-      		<a class="dlt-link" href="/delete/{{ $note->id }}">Delete</a>
+      		<a class="dlt-link" href="/delete/{{ $note->id }}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
       	</div>
       </div>
     </div>
