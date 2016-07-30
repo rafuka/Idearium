@@ -106,6 +106,11 @@ footer p {
   margin-top: 50px;
 }
 
+.form-link a {
+  color: #ffd100;
+  font-weight: bold;
+}
+
 .dlt-link {
   color: red;
   float: right;
@@ -113,4 +118,12 @@ footer p {
 
 .dlt-link:hover {
   color: red;
+}
+
+label, legend {
+  color: white;
+}
+
+input.form-control {
+  border-radius: 7px;
 }
