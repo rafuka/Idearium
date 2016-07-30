@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  background-color: #00b2c3;
+  background-image: url('../img/idearium.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: calc(100% - 61px);
 }
 
 ul {
