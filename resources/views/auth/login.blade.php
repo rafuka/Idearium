@@ -11,16 +11,17 @@
 @section('main')
     <form action="/login" method="POST" class="form-horizontal" id="login-form">
       <fieldset>
+        <legend>Log In</legend>
         {{ csrf_field() }}
         <div class="form-group">
-          <label for="email" class="col-lg-2 control-label">e-mail</label>
-          <div class="col-lg-10">
+          <label for="email" class="col-md-3 control-label">e-mail</label>
+          <div class="col-md-9">
             <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}"/><div class="error">{{ $errors->first('email') }}</div>
           </div>
         </div>
         <div class="form-group">
-          <label for="password" class="col-lg-2 control-label">password</label>
-          <div class="col-lg-10">
+          <label for="password" class="col-md-3 control-label">password</label>
+          <div class="col-md-9">
             <input type="password" class="form-control" name="password" id="password" value=""/><div class="error">{{ $errors->first('password') }}</div>
           </div>
         </div>
